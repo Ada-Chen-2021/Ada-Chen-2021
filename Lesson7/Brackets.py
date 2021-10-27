@@ -14,7 +14,7 @@ def solution(S):
             index += 1
         
         elif S[index] == "}":
-            if stack_list[len(stack_list)-1] == "{":
+            if len(stack_list) > 0 and stack_list[len(stack_list)-1] == "{":
                 #print("if } :", stack_list[len(stack_list)-1])
                 #print("----------------------")
                 del stack_list[len(stack_list)-1]
@@ -26,7 +26,7 @@ def solution(S):
                 break;
         
         elif S[index] == "]":
-            if stack_list[len(stack_list)-1] == "[":
+            if len(stack_list) > 0 and stack_list[len(stack_list)-1] == "[":
                 #print("if ] :", stack_list[len(stack_list)-1])
                 #print("----------------------")
                 del stack_list[len(stack_list)-1]
@@ -38,7 +38,7 @@ def solution(S):
                 break;
 
         elif S[index] == ")":
-            if stack_list[len(stack_list)-1] == "(":
+            if len(stack_list) > 0 and stack_list[len(stack_list)-1] == "(":
                 #print("if ) :", stack_list[len(stack_list)-1])
                 #print("----------------------")
                 del stack_list[len(stack_list)-1]
